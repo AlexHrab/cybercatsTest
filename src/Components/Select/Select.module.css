@@ -1,0 +1,7 @@
+input[list="test"]::-webkit-calendar-picker-indicator {
+  display: none !important;
+}
+
+.list {
+  position: relative;
+}

@@ -1,0 +1,9 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+input[list="test"]::-webkit-calendar-picker-indicator {
+  display: none !important;
+}

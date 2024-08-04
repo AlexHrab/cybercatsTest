@@ -1,0 +1,52 @@
+[
+  {
+    "avatar": "https://www.svgrepo.com/show/297433/elephant.svg",
+    "name": "Elephant",
+    "id": 1
+  },
+  {
+    "avatar": "https://www.svgrepo.com/show/398494/tiger-face.svg",
+    "name": "Tiger",
+    "id": 2
+  },
+  {
+    "avatar": "https://www.svgrepo.com/show/396317/dolphin.svg",
+    "name": "Dolphin",
+    "id": 3
+  },
+  {
+    "avatar": "https://www.svgrepo.com/show/191393/kangaroo.svg",
+    "name": "Kangaroo",
+    "id": 4
+  },
+  {
+    "avatar": "https://www.svgrepo.com/show/402309/penguin.svg",
+    "name": "Penguin",
+    "id": 5
+  },
+  {
+    "avatar": "https://www.svgrepo.com/show/297429/giraffe.svg",
+    "name": "Giraffe",
+    "id": 6
+  },
+  {
+    "avatar": "https://www.svgrepo.com/show/402295/panda-face.svg",
+    "name": "Panda",
+    "id": 7
+  },
+  {
+    "avatar": "https://www.svgrepo.com/show/434138/lion.svg",
+    "name": "Lion",
+    "id": 8
+  },
+  {
+    "avatar": "https://www.svgrepo.com/show/232693/eagle.svg",
+    "name": "Eagle",
+    "id": 9
+  },
+  {
+    "avatar": "https://www.svgrepo.com/show/119037/zebra.svg",
+    "name": "Zebra",
+    "id": 10
+  }
+]
