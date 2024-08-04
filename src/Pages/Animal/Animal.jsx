@@ -26,7 +26,7 @@ export function Animal({ selected, values }) {
         <div className={container}>
           <div className={innerContainer}>
             <Link
-              to={thisLocation ? `/animal/${selected}` : `/`}
+              to={thisLocation ? `/${selected}` : `/`}
               className={css.button}
             >
               {thisLocation ? "Info" : "Back"}

@@ -25,7 +25,7 @@ function App() {
           }
         />
         <Route
-          path="/animal/:name"
+          path="/:name"
           element={<Animal selected={selected} values={values} />}
         />
       </Routes>
