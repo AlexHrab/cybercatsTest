@@ -2,51 +2,61 @@
   {
     "avatar": "https://www.svgrepo.com/show/297433/elephant.svg",
     "name": "Elephant",
-    "id": 1
+    "id": 1,
+    "description": "An elephant is a large, gray mammal known for its long trunk, big ears, and tusks. Native to Africa and Asia, elephants are the largest land animals and are known for their intelligence, strong social bonds, and memory. They live in herds and play a crucial role in their ecosystems by helping to maintain the environment."
   },
   {
     "avatar": "https://www.svgrepo.com/show/398494/tiger-face.svg",
     "name": "Tiger",
-    "id": 2
+    "id": 2,
+    "description": "A tiger is a large, powerful wild cat with a distinctive orange coat marked by black stripes. Native to Asia, tigers are apex predators known for their strength, agility, and solitary nature. They are the largest members of the cat family and are skilled hunters, primarily preying on large mammals. Tigers play a critical role in their ecosystems by maintaining the balance of prey populations."
   },
   {
     "avatar": "https://www.svgrepo.com/show/396317/dolphin.svg",
     "name": "Dolphin",
-    "id": 3
+    "id": 3,
+    "description": "A dolphin is a highly intelligent marine mammal known for its streamlined body, playful behavior, and echolocation abilities. Dolphins have a curved dorsal fin, a beak-like snout, and are often recognized for their social nature, living in groups called pods. They are found in oceans around the world and are known for their communication skills and complex social interactions."
   },
   {
     "avatar": "https://www.svgrepo.com/show/191393/kangaroo.svg",
     "name": "Kangaroo",
-    "id": 4
+    "id": 4,
+    "description": "A kangaroo is a large marsupial native to Australia, recognized for its powerful hind legs, long tail, and strong jumping abilities. Kangaroos have a distinctive hopping gait and are known for their ability to cover large distances in search of food. They live in groups called mobs and carry their young, called joeys, in a pouch."
   },
   {
     "avatar": "https://www.svgrepo.com/show/402309/penguin.svg",
     "name": "Penguin",
-    "id": 5
+    "id": 5,
+    "description": "A penguin is a flightless bird known for its distinctive black and white plumage, which resembles a tuxedo. Native to the Southern Hemisphere, especially Antarctica, penguins are excellent swimmers and spend most of their time in the water hunting for fish and krill. They have adapted to cold environments and are social animals that often live in large colonies."
   },
   {
     "avatar": "https://www.svgrepo.com/show/297429/giraffe.svg",
     "name": "Giraffe",
-    "id": 6
+    "id": 6,
+    "description": "A giraffe is a tall, long-necked herbivore native to Africa, recognized for its unique appearance with a long neck, long legs, and distinctive spotted coat. Giraffes are the tallest land animals, using their height to browse leaves high up in trees. They are social animals, often found in loose herds, and have a gentle and curious nature."
   },
   {
     "avatar": "https://www.svgrepo.com/show/402295/panda-face.svg",
     "name": "Panda",
-    "id": 7
+    "id": 7,
+    "description": "A panda is a large, bear-like mammal native to China, known for its distinctive black-and-white fur. Pandas primarily eat bamboo, which makes up the majority of their diet, although they occasionally consume other plants and small animals. They are generally solitary animals and are recognized for their gentle demeanor and playful behavior. Pandas are considered a symbol of wildlife conservation efforts."
   },
   {
     "avatar": "https://www.svgrepo.com/show/434138/lion.svg",
     "name": "Lion",
-    "id": 8
+    "id": 8,
+    "description": "A lion is a large, powerful carnivorous mammal known for its majestic mane (in males), muscular build, and social behavior. Native to Africa and a small region in Asia, lions live in groups called prides and are apex predators, primarily hunting large herbivores. They are often referred to as the king of the jungle due to their prominent position in the animal kingdom."
   },
   {
     "avatar": "https://www.svgrepo.com/show/232693/eagle.svg",
     "name": "Eagle",
-    "id": 9
+    "id": 9,
+    "description": "An eagle is a large bird of prey known for its keen eyesight, strong talons, and powerful beak. Eagles are skilled hunters and are found in various parts of the world, often perched high to spot potential prey. They are symbols of strength and freedom and are renowned for their impressive flight abilities and majestic appearance."
   },
   {
     "avatar": "https://www.svgrepo.com/show/119037/zebra.svg",
     "name": "Zebra",
-    "id": 10
+    "id": 10,
+    "description": "A zebra is a wild African horse known for its distinctive black-and-white striped coat. These stripes are unique to each individual and help with camouflage and social interactions within their herds. Zebras are herbivores, grazing mainly on grass, and are known for their social behavior, living in groups for protection and companionship."
   }
 ]

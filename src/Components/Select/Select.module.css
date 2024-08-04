@@ -1,7 +1,71 @@
-input[list="test"]::-webkit-calendar-picker-indicator {
-  display: none !important;
+.customDropdown {
+  position: absolute;
+  top: 30px;
+  left: 50%;
+  transform: translate(-50%);
+  margin: 0 auto;
+  align-self: center;
+  justify-self: center;
+  width: 300px;
+  height: 50px;
 }
 
-.list {
+.input {
+  box-sizing: border-box;
+  width: 300px;
+  height: 50px;
+  outline: none;
+  border: 2px solid rgb(234 88 12);
+  border-radius: 4px;
+  font-size: 26px;
+  font-weight: 500;
+  color: brown;
+  padding: 8px 50px 8px 8px;
+}
+
+.input:focus {
+  border: 2px solid rgb(251 191 36);
+}
+
+.inputBox {
   position: relative;
+  width: 300px;
+  height: 50px;
+  box-sizing: border-box;
+}
+
+.inputIcon {
+  top: 6px;
+  right: 0;
+  position: absolute;
+  font-size: 40px;
+  fill: rgb(245 158 11);
+}
+
+.dropdownOptions {
+  box-sizing: border-box;
+  border-radius: 6px;
+  position: absolute;
+  top: 50px;
+  width: 300px;
+  background-color: rgb(245 158 11);
+  max-height: 100px;
+  overflow-y: auto;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+
+  flex: 1;
+  color: rgb(69 26 3);
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.dropdownOptionsItem:hover {
+  background-color: rgb(217 119 6);
+}
+
+.dropdownOptionsItem {
+  padding: 6px;
+  cursor: pointer;
 }

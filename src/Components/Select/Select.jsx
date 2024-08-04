@@ -1,20 +1,19 @@
 import { useState } from "react";
 import css from "./Select.module.css";
 import { useRef, useEffect } from "react";
+import { AiFillCaretDown } from "react-icons/ai";
+import { AiFillCaretUp } from "react-icons/ai";
 
-export function Select() {
-  const [values] = useState(() => {
-    const savedValues = JSON.parse(window.localStorage.getItem("savedAnimals"));
-    return savedValues || [];
-  });
-
+export function Select({ values, selected, setSelected }) {
   const [isOpen, setIsOpen] = useState(false);
-  const [selected, setSelected] = useState("");
+
   const dropdownRef = useRef(null);
 
   useEffect(() => {
     function handleDocumentClick(event) {
-      setIsOpen(false);
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+        setIsOpen(false);
+      }
     }
 
     document.addEventListener("mousedown", handleDocumentClick);
@@ -23,19 +22,17 @@ export function Select() {
     };
   }, []);
 
-  useEffect(() => {
-    if (selected) {
-      setIsOpen(true);
-    }
-  }, [selected]);
+  function handleOptionClick(name) {
+    setTimeout(() => {
+      setIsOpen(false);
+    }, 0);
 
-  function handleOptionClick(option) {
-    setSelected(option);
-    setIsOpen(false);
+    setSelected(name);
   }
 
   function handleInputChange(event) {
     setSelected(event.target.value);
+    setIsOpen(true);
   }
 
   const filteredValues = values.filter((value) =>
@@ -43,18 +40,26 @@ export function Select() {
   );
 
   return (
-    <div className={css.customDropdown}>
-      <input
-        type="text"
-        value={selected}
-        // onClick={() => setIsOpen(!isOpen)}
-        onChange={handleInputChange}
-      />
+    <div className={css.customDropdown} ref={dropdownRef}>
+      <div className={css.inputBox}>
+        <input
+          className={css.input}
+          type="text"
+          value={selected}
+          onChange={handleInputChange}
+        />
+        {isOpen ? (
+          <AiFillCaretUp className={css.inputIcon} />
+        ) : (
+          <AiFillCaretDown className={css.inputIcon} />
+        )}
+      </div>
       {isOpen && (
         <ul className={css.dropdownOptions}>
           {filteredValues.length > 0 ? (
             filteredValues.map((option) => (
               <li
+                className={css.dropdownOptionsItem}
                 key={option.id}
                 onClick={() => handleOptionClick(option.name)}
               >
@@ -70,38 +75,4 @@ export function Select() {
       )}
     </div>
   );
-}
-
-{
-  /* <select
-name="select"
-id="select"
-value={selectedValue}
-onChange={handleChange}
->
-<option value="" disabled></option>
-{values.map((el) => (
-  <option key={el.id} value={el.id}>
-    {el.name}
-  </option>
-))}
-</select> */
-}
-
-{
-  /* <div className={css.list}>
-      <input
-        type="text"
-        list="animals"
-        value={selectedValue}
-        onChange={handleChange}
-      />
-      <datalist id="animals">
-        {values.map((el) => (
-          <option key={el.id} data-id={el.id}>
-            {el.name}
-          </option>
-        ))}
-      </datalist>
-    </div> */
 }
