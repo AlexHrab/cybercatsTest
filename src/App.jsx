@@ -4,7 +4,7 @@ import "./App.css";
 import { Home } from "./Pages/Home/Home";
 import { Animal } from "./Pages/Animal/Animal";
 
-function AnimalAutocomplete() {
+function App() {
   const [values] = useState(() => {
     const savedValues = JSON.parse(window.localStorage.getItem("savedAnimals"));
     return savedValues || [];
@@ -33,4 +33,4 @@ function AnimalAutocomplete() {
   );
 }
 
-export default AnimalAutocomplete;
+export default App;
