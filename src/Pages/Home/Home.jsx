@@ -12,7 +12,7 @@ export function Home({ values, selected, setSelected }) {
     function getAnimals() {
       setTimeout(async () => {
         try {
-          const result = await axios.get("animals.json");
+          const result = await axios.get("/animals.json");
           window.localStorage.setItem(
             "savedAnimals",
             JSON.stringify(result.data)
