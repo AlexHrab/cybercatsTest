@@ -69,3 +69,11 @@
   padding: 6px;
   cursor: pointer;
 }
+
+.inputIcon {
+  transition: transform 0.5s ease-in-out;
+}
+
+.rotate {
+  transform: rotate(180deg);
+}

@@ -1,11 +1,12 @@
 import { useState } from "react";
 import css from "./Select.module.css";
 import { useRef, useEffect } from "react";
-import { AiFillCaretDown } from "react-icons/ai";
 import { AiFillCaretUp } from "react-icons/ai";
+import clsx from "clsx";
 
 export function Select({ values, selected, setSelected }) {
   const [isOpen, setIsOpen] = useState(false);
+  const icon = clsx(css.inputIcon, isOpen && css.rotate);
 
   const dropdownRef = useRef(null);
 
@@ -48,11 +49,7 @@ export function Select({ values, selected, setSelected }) {
           value={selected}
           onChange={handleInputChange}
         />
-        {isOpen ? (
-          <AiFillCaretUp className={css.inputIcon} />
-        ) : (
-          <AiFillCaretDown className={css.inputIcon} />
-        )}
+        <AiFillCaretUp className={icon} />
       </div>
       {isOpen && (
         <ul className={css.dropdownOptions}>
