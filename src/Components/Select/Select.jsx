@@ -1,44 +1,45 @@
-import { useState } from "react";
+import { useState, useRef, useEffect, useMemo, useCallback } from "react";
 import css from "./Select.module.css";
-import { useRef, useEffect } from "react";
 import { AiFillCaretUp } from "react-icons/ai";
 import clsx from "clsx";
 
 export function Select({ values, selected, setSelected }) {
   const [isOpen, setIsOpen] = useState(false);
-  const icon = clsx(css.inputIcon, isOpen && css.rotate);
-
   const dropdownRef = useRef(null);
 
+  const icon = clsx(css.inputIcon, isOpen && css.rotate);
+
   useEffect(() => {
-    function handleDocumentClick(event) {
-      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+    const handleClick = (e) => {
+      if (!dropdownRef.current?.contains(e.target)) {
         setIsOpen(false);
       }
-    }
-
-    document.addEventListener("mousedown", handleDocumentClick);
-    return () => {
-      document.removeEventListener("mousedown", handleDocumentClick);
     };
+
+    document.addEventListener("mousedown", handleClick);
+    return () => document.removeEventListener("mousedown", handleClick);
   }, []);
 
-  function handleOptionClick(name) {
-    setTimeout(() => {
+  const handleOptionClick = useCallback(
+    (name) => {
+      setSelected(name);
       setIsOpen(false);
-    }, 0);
-
-    setSelected(name);
-  }
-
-  function handleInputChange(event) {
-    setSelected(event.target.value);
-    setIsOpen(true);
-  }
-
-  const filteredValues = values.filter((value) =>
-    value.name.toLowerCase().startsWith(selected.toLowerCase())
+    },
+    [setSelected]
   );
+
+  const handleInputChange = useCallback(
+    (e) => {
+      setSelected(e.target.value);
+      setIsOpen(true);
+    },
+    [setSelected]
+  );
+
+  const filteredValues = useMemo(() => {
+    const text = selected.toLowerCase();
+    return values.filter((item) => item.name.toLowerCase().startsWith(text));
+  }, [values, selected]);
 
   return (
     <div className={css.customDropdown} ref={dropdownRef}>
@@ -48,9 +49,11 @@ export function Select({ values, selected, setSelected }) {
           type="text"
           value={selected}
           onChange={handleInputChange}
+          onFocus={() => setIsOpen(true)}
         />
         <AiFillCaretUp className={icon} />
       </div>
+
       {isOpen && (
         <ul className={css.dropdownOptions}>
           {filteredValues.length > 0 ? (
@@ -64,9 +67,7 @@ export function Select({ values, selected, setSelected }) {
               </li>
             ))
           ) : (
-            <li>
-              <p>No matches found</p>
-            </li>
+            <li className={css.noMatches}>No matches found</li>
           )}
         </ul>
       )}
